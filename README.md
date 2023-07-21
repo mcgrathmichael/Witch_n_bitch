@@ -1,6 +1,6 @@
 # Witch N Bitch ✨🧙‍♀️
 
-Witch N Bitch is a mystical web application that offers you a daily card reading, horoscope, and a journal entry section. Get ready to explore the magical world of tarot cards and find out what the stars have in store for you.
+Witch N Bitch is a mystical web application that offers you a daily card reading, horoscope, and a journal entry section for all your wiitchin' and bitchin'. Get ready to explore the magical world of tarot cards and find out what the stars have in store for you.
 
 ## Features 🔮
 
