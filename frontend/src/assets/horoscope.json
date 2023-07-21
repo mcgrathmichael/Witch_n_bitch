@@ -1,0 +1,266 @@
+{
+  "aries": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Leo",
+      "lucky_number": 7,
+      "lucky_time": "11:00 am",
+      "color": "Red",
+      "date_range": "March 21 - April 19",
+      "mood": "Energetic",
+      "description": "Today is a great day for new beginnings. Take charge and pursue your goals with passion."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Sagittarius",
+      "lucky_number": 9,
+      "lucky_time": "10:30 am",
+      "color": "Orange",
+      "date_range": "March 21 - April 19",
+      "mood": "Optimistic",
+      "description": "Tomorrow holds exciting opportunities for adventure. Embrace new experiences and explore the unknown."
+    }
+  },
+  "taurus": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Virgo",
+      "lucky_number": 4,
+      "lucky_time": "2:30 pm",
+      "color": "Green",
+      "date_range": "April 20 - May 20",
+      "mood": "Stable",
+      "description": "You might face some challenges today, but your determination will help you overcome them."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Capricorn",
+      "lucky_number": 6,
+      "lucky_time": "1:45 pm",
+      "color": "Brown",
+      "date_range": "April 20 - May 20",
+      "mood": "Focused",
+      "description": "Tomorrow calls for a disciplined approach. Stay focused on your goals and trust your instincts."
+    }
+  },
+  "gemini": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Libra",
+      "lucky_number": 9,
+      "lucky_time": "6:15 pm",
+      "color": "Yellow",
+      "date_range": "May 21 - June 20",
+      "mood": "Curious",
+      "description": "Engage in intellectual pursuits and explore new ideas. Your communication skills will shine today."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Aquarius",
+      "lucky_number": 5,
+      "lucky_time": "4:00 pm",
+      "color": "Sky Blue",
+      "date_range": "May 21 - June 20",
+      "mood": "Innovative",
+      "description": "Tomorrow sparks creativity and innovation. Embrace your unique perspective and think outside the box."
+    }
+  },
+  "cancer": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Scorpio",
+      "lucky_number": 2,
+      "lucky_time": "9:45 am",
+      "color": "Silver",
+      "date_range": "June 21 - July 22",
+      "mood": "Nurturing",
+      "description": "Focus on self-care and emotional well-being. Your intuition will guide you in making important decisions."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Pisces",
+      "lucky_number": 7,
+      "lucky_time": "11:15 am",
+      "color": "Lavender",
+      "date_range": "June 21 - July 22",
+      "mood": "Compassionate",
+      "description": "Tomorrow encourages empathy and compassion. Extend your support to those in need and spread positivity."
+    }
+  },
+  "leo": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Aries",
+      "lucky_number": 5,
+      "lucky_time": "3:30 pm",
+      "color": "Gold",
+      "date_range": "July 23 - August 22",
+      "mood": "Confident",
+      "description": "Embrace your natural leadership qualities and shine bright. Your charisma will attract positive opportunities."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Gemini",
+      "lucky_number": 3,
+      "lucky_time": "12:00 pm",
+      "color": "Yellow",
+      "date_range": "July 23 - August 22",
+      "mood": "Expressive",
+      "description": "Tomorrow enhances your communication skills. Express yourself with clarity and confidence."
+    }
+  },
+  "virgo": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Taurus",
+      "lucky_number": 6,
+      "lucky_time": "1:30 pm",
+      "color": "Navy Blue",
+      "date_range": "August 23 - September 22",
+      "mood": "Practical",
+      "description": "Pay attention to details and focus on organization. Your practical approach will lead to success."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Cancer",
+      "lucky_number": 8,
+      "lucky_time": "2:45 pm",
+      "color": "Gray",
+      "date_range": "August 23 - September 22",
+      "mood": "Analytical",
+      "description": "Tomorrow highlights your analytical abilities. Trust your instincts and make well-informed decisions."
+    }
+  },
+  "libra": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Gemini",
+      "lucky_number": 4,
+      "lucky_time": "2:00 pm",
+      "color": "Pastel Pink",
+      "date_range": "September 23 - October 22",
+      "mood": "Harmonious",
+      "description": "Seek balance and harmony in all aspects of life. Focus on nurturing relationships and fostering peace."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Leo",
+      "lucky_number": 1,
+      "lucky_time": "9:30 am",
+      "color": "Rose",
+      "date_range": "September 23 - October 22",
+      "mood": "Creative",
+      "description": "Tomorrow ignites your creative spark. Embrace artistic endeavors and express your unique talents."
+    }
+  },
+  "scorpio": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Cancer",
+      "lucky_number": 8,
+      "lucky_time": "1:45 pm",
+      "color": "Maroon",
+      "date_range": "October 23 - November 21",
+      "mood": "Intense",
+      "description": "Tap into your inner strength and embrace your passions. Your determination will lead to remarkable achievements."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Pisces",
+      "lucky_number": 5,
+      "lucky_time": "3:15 pm",
+      "color": "Deep Blue",
+      "date_range": "October 23 - November 21",
+      "mood": "Mysterious",
+      "description": "Tomorrow holds mysterious energies. Trust your instincts and uncover hidden opportunities."
+    }
+  },
+  "sagittarius": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Aries",
+      "lucky_number": 9,
+      "lucky_time": "4:15 pm",
+      "color": "Purple",
+      "date_range": "November 22 - December 21",
+      "mood": "Adventurous",
+      "description": "Embrace your adventurous spirit and seek new experiences. Today is a day for exploration and growth."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Leo",
+      "lucky_number": 7,
+      "lucky_time": "11:45 am",
+      "color": "Turquoise",
+      "date_range": "November 22 - December 21",
+      "mood": "Optimistic",
+      "description": "Tomorrow brings optimism and positivity. Trust your instincts and follow your dreams with enthusiasm."
+    }
+  },
+  "capricorn": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Taurus",
+      "lucky_number": 3,
+      "lucky_time": "12:30 pm",
+      "color": "Dark Green",
+      "date_range": "December 22 - January 19",
+      "mood": "Ambitious",
+      "description": "Focus on your long-term goals and take steps towards achieving them. Your determination will lead to success."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Virgo",
+      "lucky_number": 2,
+      "lucky_time": "9:00 am",
+      "color": "Black",
+      "date_range": "December 22 - January 19",
+      "mood": "Practical",
+      "description": "Tomorrow calls for practicality and organization. Plan your day efficiently and stay focused on your priorities."
+    }
+  },
+  "aquarius": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Gemini",
+      "lucky_number": 10,
+      "lucky_time": "4:45 pm",
+      "color": "Blue",
+      "date_range": "January 20 - February 18",
+      "mood": "Innovative",
+      "description": "Embrace your unique perspective and think outside the box. Your ideas will inspire others."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Libra",
+      "lucky_number": 6,
+      "lucky_time": "1:30 pm",
+      "color": "Silver",
+      "date_range": "January 20 - February 18",
+      "mood": "Balanced",
+      "description": "Tomorrow emphasizes harmony and balance. Seek inner peace and maintain a calm and composed demeanor."
+    }
+  },
+  "pisces": {
+    "today": {
+      "current_date": "2023-07-19",
+      "compatibility": "Cancer",
+      "lucky_number": 12,
+      "lucky_time": "7:20 pm",
+      "color": "Sea Green",
+      "date_range": "February 19 - March 20",
+      "mood": "Dreamy",
+      "description": "Tap into your intuition and creativity. Trust your instincts and pursue your dreams with passion."
+    },
+    "tomorrow": {
+      "current_date": "2023-07-20",
+      "compatibility": "Scorpio",
+      "lucky_number": 8,
+      "lucky_time": "2:00 pm",
+      "color": "Purple",
+      "date_range": "February 19 - March 20",
+      "mood": "Intuitive",
+      "description": "Tomorrow enhances your intuition and psychic abilities. Trust your inner voice and embrace spiritual insights."
+    }
+  }
+}
