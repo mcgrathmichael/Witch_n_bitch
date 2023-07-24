@@ -25,15 +25,15 @@ const hashPassword = (req, res, next) => {
 
 const verifyPasswordAndGenerateToken = (req, res, next) => {
   argon2
-    .verify(req.users.hashedPassword, req.body.password)
+    .verify(req.user.hashedPassword, req.body.password)
     .then((isVerified) => {
       if (isVerified) {
-        const payload = { sub: req.users.id };
+        const payload = { sub: req.user.id };
         const token = jwt.sign(payload, process.env.JWT_SECRET, {
           expiresIn: "1h",
         });
 
-        delete req.users.hashedPassword;
+        delete req.user.hashedPassword;
 
         res.cookie("token", token, {
           maxAge: 15 * 60 * 1000,
@@ -43,10 +43,10 @@ const verifyPasswordAndGenerateToken = (req, res, next) => {
         });
 
         res.send({
-          users: {
-            id: req.users.id,
-            username: req.users.username,
-            admin: req.users.admin,
+          user: {
+            id: req.user.id,
+            name: req.user.name,
+            starsign: req.user.starsign,
           },
         });
       } else {

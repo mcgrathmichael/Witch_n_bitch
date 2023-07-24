@@ -1,6 +1,6 @@
+import { useState } from "react";
 import HoroscopeForm from "../chartform";
 import HoroscopeResult from "../HoroscopeResult";
-import { useState } from "react";
 
 export default function Horoscope() {
   const [horoscope, setHoroscope] = useState(null);

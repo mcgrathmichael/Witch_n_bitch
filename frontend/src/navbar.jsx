@@ -1,18 +1,19 @@
+/* eslint-disable */
+import { NavLink } from "react-router-dom";
 import tarot from "./assets/icons/tarot-card.png";
 import astrology from "./assets/icons/astrology.png";
 import notebook from "./assets/icons/notebook.png";
-import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <>
-      <div className="hidden md:navbar bg-primary rounded-md ">
+      <div className="hidden rounded-md md:navbar bg-primary ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="w-5 h-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -40,12 +41,13 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl" href="/">
+          <a className="text-xl normal-case btn btn-ghost" href="/">
             Witch_'n'_Bitch{" "}
           </a>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal gap-2 px-1">
+
+        <div className="hidden navbar-center lg:flex">
+          <ul className="gap-2 px-1 menu menu-horizontal">
             <li className="btn">
               <a href="/horoscope">Horoscope</a>
             </li>{" "}
@@ -66,21 +68,21 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="md:hidden btm-nav h-0 pt-2">
+      <div className="h-5 md:hidden btm-nav">
         <NavLink className="" to="/cards">
-          <button className="text-accent p-2 bg-primary">
-            <img className="" src={tarot}></img>{" "}
+          <button className="p-2 text-accent bg-primary">
+            <img className="" src={tarot} />{" "}
           </button>
         </NavLink>
         <NavLink to="/horoscope">
-          <button className="text-primary p-2 active bg-accent">
-            <img src={astrology} className=""></img>
+          <button className="p-2 text-primary active bg-accent">
+            <img src={astrology} className="" />
           </button>
         </NavLink>
         <NavLink to="/notes">
           {" "}
-          <button className="text-primary p-2 bg-secondary">
-            <img src={notebook}></img>
+          <button className="p-2 text-primary bg-secondary">
+            <img src={notebook} />
           </button>
         </NavLink>
       </div>

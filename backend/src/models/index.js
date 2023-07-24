@@ -38,13 +38,8 @@ models.item.setDatabase(pool);
 // when asking for a non existing model
 const UsersManager = require("./UsersManager");
 
-models.users = new UsersManager();
-models.users.setDatabase(pool);
-
-const ChartManager = require("./ChartManager");
-
-models.charts = new ChartManager();
-models.charts.setDatabase(pool);
+models.user = new UsersManager();
+models.user.setDatabase(pool);
 
 const handler = {
   get(obj, prop) {

@@ -11,16 +11,45 @@
 @font-face {
   font-family: "Basteleur-Moonlight";
   src: url("./assets/Basteleur-Moonlight.ttf") format("truetype");
-  /* You may add other font formats (e.g., .woff, .woff2) if you have them */
-  /* e.g., url('../../assets/Mynerve-Regular.woff') format('woff') */
-  /* e.g., url('../../assets/Mynerve-Regular.woff2') format('woff2') */
+
   font-weight: 400;
   font-style: normal;
 }
 body {
   font-family: "Basteleur-Moonlight";
 }
+body {
+  background-color: linear-gradient(
+    to right,
+    rgb(249, 168, 212),
+    rgb(216, 180, 254),
+    rgb(129, 140, 248)
+  );
+}
 
+.md\:navbar {
+  /* Your existing styles for the .md:navbar class */
+}
+
+.btm-nav {
+  /* Your existing styles for the .btm-nav class */
+}
+
+.notes-app {
+  /* Set a maximum height for the NotesApp container */
+  /* Subtract the height of the bottom navbar */
+
+  /* Enable scrolling when content overflows */
+}
+
+.components-container {
+  /* Stretch to full height */
+  /* height: 80%; */
+  /* Position above the Navbar */
+  /* position: relative; */
+  /* Set z-index to appear above the Navbar */
+  /* z-index: 10; */
+}
 /* .colored-toast.swal2-icon-success {
   background-color: #a5dc86 !important;
 }

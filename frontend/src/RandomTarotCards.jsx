@@ -1,23 +1,21 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import TarotCard from "./TarotCard";
 import tarotData from "./assets/archive/tarot-images.json";
 
-const RandomTarotCards = () => {
+function RandomTarotCards() {
   const [randomCards, setRandomCards] = useState([]);
   const [showCopy, setShowCopy] = useState(true);
   const generateRandomCards = () => {
     const shuffledCards = tarotData.cards.sort(() => 0.5 - Math.random());
 
-    // Take the first three unique cards
-    let selectedCards = [];
+    const selectedCards = [];
     let index = 0;
 
     while (selectedCards.length < 3 && index < shuffledCards.length) {
       const currentCard = shuffledCards[index];
 
-      // Check if the current card is not already in the selected cards
       if (!selectedCards.some((card) => card.number === currentCard.number)) {
-        // Randomly select light or shadow meanings
         const meaningsType = Math.random() < 0.5 ? "light" : "shadow";
         const randomMeaning =
           currentCard.meanings[meaningsType][
@@ -30,11 +28,10 @@ const RandomTarotCards = () => {
           currentCard.fortune_telling[
             Math.floor(Math.random() * currentCard.fortune_telling.length)
           ];
-        // Add the selected card with the random question to the array
         selectedCards.push({
           ...currentCard,
           randomQuestion: randomMeaning,
-          randomFortune: randomFortune,
+          randomFortune,
         });
       }
 
@@ -45,9 +42,9 @@ const RandomTarotCards = () => {
   };
 
   return (
-    <div className="md:card md:h-1/2  md:carousel">
-      <div className="  md:flex md:self-center h-4/6 md:flex-row">
-        <div className="md:carousel-item  pb-10">
+    <div className="md:p-4 md:card">
+      <div className=" md:self-center">
+        <div className="gap-4 md:grid md:grid-cols-3">
           {" "}
           {randomCards.map((card) => (
             <TarotCard key={card.number} card={card} />
@@ -55,8 +52,8 @@ const RandomTarotCards = () => {
         </div>
       </div>{" "}
       {showCopy && (
-        <div className="flex card-body rounded-md bg-primary self-center text-accent">
-          <p className="max-w-md text-center p-4 text-sm sm:text-base">
+        <div className="flex self-center mb-12 rounded-md md:mx-12 card-body bg-primary text-accent">
+          <p className="text-sm text-center md:p-4 sm:text-base">
             🔮 Unveil the Veiled - Tarot Daily Spread! 🔮
             <br />
             <br />
@@ -85,7 +82,7 @@ const RandomTarotCards = () => {
             destiny's dance begin. 🔍
           </p>
           <button
-            className="w-full hover:shadow-lg hover:shadow-accent my-12 btn-accent text-black hover:ring-2 ring-bg-base btn-active btn"
+            className="self-center w-full my-12 text-black md:w-1/2 hover:shadow-lg hover:shadow-accent btn-accent hover:ring-2 ring-bg-base btn-active btn"
             onClick={generateRandomCards}
           >
             Find today's cards
@@ -94,6 +91,6 @@ const RandomTarotCards = () => {
       )}
     </div>
   );
-};
+}
 
 export default RandomTarotCards;

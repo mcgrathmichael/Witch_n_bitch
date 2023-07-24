@@ -1,28 +1,26 @@
+/* eslint-disable */
 import React, { useState } from "react";
-import horoscopeData from "../src/assets/horoscope.json";
+import horoscopeData from "./assets/horoscope.json";
 
 function HoroscopeForm({ setHoroscope, selectedSign, setSelectedSign }) {
-  // const [selectedSign, setSelectedSign] = useState("");
   const [selectedDay, setSelectedDay] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Retrieve the horoscope based on the selected sign and day
     const selectedHoroscope = horoscopeData[selectedSign][selectedDay];
 
-    // Set the horoscope state
     setHoroscope(selectedHoroscope);
   };
 
   return (
-    <div className="card-body max-w-md mx-auto p-8 mt-10 rounded-lg shadow-md">
-      <h1 className="font-bold max-w-md mx-auto p-8 mt-10 text-xl">
+    <div className="justify-center max-w-md p-8 mx-auto mt-10 rounded-lg shadow-md card-body">
+      <h1 className="max-w-md p-8 mx-auto mt-10 text-xl font-bold card-title ">
         Let's check our Horoscope
       </h1>
-      <form onSubmit={handleSubmit}>
+      <form className="card-body" onSubmit={handleSubmit}>
         <select
-          className="select select-primary mb-10 w-full max-w-xs"
+          className="w-full max-w-xs mb-10 select select-primary"
           onChange={(event) => setSelectedSign(event.target.value)}
         >
           <option>Select your Star Sign</option>
@@ -43,7 +41,7 @@ function HoroscopeForm({ setHoroscope, selectedSign, setSelectedSign }) {
         <select
           value={selectedDay}
           onChange={(event) => setSelectedDay(event.target.value)}
-          className="select mb-10 select-accent w-full max-w-xs"
+          className="w-full max-w-xs mb-10 select select-accent"
         >
           <option value=""> Select Day</option>
           <option value="today">Today</option>

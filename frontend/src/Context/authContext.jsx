@@ -1,4 +1,9 @@
-import React, { createContext, useState, useEffect, useMemo } from "react";
+/* eslint-disable */ import React, {
+  createContext,
+  useState,
+  useEffect,
+  useMemo,
+} from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
@@ -10,12 +15,17 @@ function AuthProvider({ children }) {
   const [isconnected, setIsconnected] = useState(false);
 
   useEffect(() => {
-    // Check if the user data is available in local storage
     const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      const parsedUser = JSON.parse(storedUser);
-      setUser(parsedUser);
-      setIsconnected(true);
+    if (!!storedUser) {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setUser(parsedUser);
+        console.log(parsedUser);
+        setIsconnected(true);
+      } catch (error) {
+        console.error("Error parsing stored user data:", error);
+        // Handle the parsing error as needed
+      }
     }
     setIsLoading(false);
   }, []);
@@ -30,6 +40,7 @@ function AuthProvider({ children }) {
       .then((response) => {
         setUser(response.data.user);
         setIsconnected(true);
+        console.log(response.data.user);
         // Store the user data in local storage
         localStorage.setItem("user", JSON.stringify(response.data.user));
       })

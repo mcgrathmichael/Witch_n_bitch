@@ -1,17 +1,19 @@
+/* eslint-disable */
 import { v4 as uuidv4 } from "uuid";
 import React, { useState, useEffect, useRef } from "react";
 import Masonry from "masonry-layout";
 import Cookies from "js-cookie";
+import "./App.css";
 
-const Note = ({ color, onDelete, children }) => {
+function Note({ color, onDelete, children }) {
   const style = { backgroundColor: color };
   return (
-    <div className="h-fit ">
-      <div className="card p-4  flex bg-primary" style={style}>
+    <div className=" md:h-fit">
+      <div className="p-4 card md:w-96 h-fit bg-primary" style={style}>
         <button onClick={onDelete} className="btn btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="w-6 h-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -24,13 +26,13 @@ const Note = ({ color, onDelete, children }) => {
             />
           </svg>
         </button>
-        {children}
-      </div>
+        <div className="flex m-2 align-center">{children}</div>
+      </div>{" "}
     </div>
   );
-};
+}
 
-const NoteEditor = ({ onNoteAdd }) => {
+function NoteEditor({ onNoteAdd }) {
   const [text, setText] = useState("");
   const [color, setColor] = useState("#FFA726");
 
@@ -40,7 +42,7 @@ const NoteEditor = ({ onNoteAdd }) => {
 
   const handleNoteAdd = () => {
     const notesStr = Cookies.get("notes");
-    let notesArray = notesStr ? JSON.parse(notesStr) : [];
+    const notesArray = notesStr ? JSON.parse(notesStr) : [];
 
     const newNote = {
       text,
@@ -60,11 +62,11 @@ const NoteEditor = ({ onNoteAdd }) => {
   };
 
   return (
-    <div className="container space-y-2">
+    <div className="container space-y-2 ">
       <textarea
-        placeholder="Enter your note here..."
+        placeholder="Let's start our note here..."
         rows={5}
-        className="input input-bordered input-primary text-secondary  h-24 ax-w-xs w-full"
+        className="w-full h-24 input input-bordered input-primary text-secondary ax-w-xs"
         value={text}
         onChange={handleTextChange}
       />
@@ -74,65 +76,65 @@ const NoteEditor = ({ onNoteAdd }) => {
           name="color-pick"
           value="#F06292"
           id="color1"
-          className="form-radio text-pink-600"
+          className="text-pink-600 form-radio"
           onChange={handleColorChange}
         />
         <label
           htmlFor="color1"
-          className="w-6 h-6 rounded-full bg-pink-600 cursor-pointer"
-        ></label>
+          className="w-6 h-6 bg-pink-600 rounded-full cursor-pointer"
+        />
 
         <input
           type="radio"
           name="color-pick"
           value="#BA68C8"
           id="color2"
-          className="form-radio text-purple-600"
+          className="text-purple-600 form-radio"
           onChange={handleColorChange}
         />
         <label
           htmlFor="color2"
-          className="w-6 h-6 rounded-full bg-purple-600 cursor-pointer"
-        ></label>
+          className="w-6 h-6 bg-purple-600 rounded-full cursor-pointer"
+        />
 
         <input
           type="radio"
           name="color-pick"
           value="#FFD54F"
           id="color3"
-          className="form-radio text-yellow-500"
+          className="text-yellow-500 form-radio"
           onChange={handleColorChange}
         />
         <label
           htmlFor="color3"
-          className="w-6 h-6 rounded-full bg-yellow-500 cursor-pointer"
-        ></label>
+          className="w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"
+        />
 
         <input
           type="radio"
           name="color-pick"
           value="#4FC3F7"
           id="color4"
-          className="form-radio text-blue-500"
+          className="text-blue-500 form-radio"
           onChange={handleColorChange}
         />
         <label
           htmlFor="color4"
-          className="w-6 h-6 rounded-full bg-blue-500 cursor-pointer"
-        ></label>
+          className="w-6 h-6 bg-blue-500 rounded-full cursor-pointer"
+        />
 
         <input
           type="radio"
           name="color-pick"
           value="#AED581"
           id="color5"
-          className="form-radio text-green-500"
+          className="text-green-500 form-radio"
           onChange={handleColorChange}
         />
         <label
           htmlFor="color5"
-          className="w-6 h-6 rounded-full bg-green-500 cursor-pointer"
-        ></label>
+          className="w-6 h-6 bg-green-500 rounded-full cursor-pointer"
+        />
       </div>
       <button
         className="btn btn-primary btn-block"
@@ -143,18 +145,15 @@ const NoteEditor = ({ onNoteAdd }) => {
       </button>
     </div>
   );
-};
+}
 
-const NotesGrid = ({ notes, onNoteDelete }) => {
+function NotesGrid({ notes, onNoteDelete }) {
   const gridRef = useRef(null);
   const msnryRef = useRef(null);
 
   useEffect(() => {
     msnryRef.current = new Masonry(gridRef.current, {
       itemSelector: ".note",
-      columnWidth: 200,
-      gutter: 10,
-      isFitWidth: true,
     });
   }, []);
 
@@ -166,10 +165,7 @@ const NotesGrid = ({ notes, onNoteDelete }) => {
   }, [notes]);
 
   return (
-    <div
-      className="masonry md:flex  -z-10 grid grid-cols-1 gap-4 "
-      ref={gridRef}
-    >
+    <div className="grid grid-cols-1 gap-4 masonry md:flex" ref={gridRef}>
       {notes.map((note) => (
         <Note
           key={note.id}
@@ -181,9 +177,9 @@ const NotesGrid = ({ notes, onNoteDelete }) => {
       ))}
     </div>
   );
-};
+}
 
-const NoteSearch = ({ onSearch }) => {
+function NoteSearch({ onSearch }) {
   const handleSearch = (event) => {
     onSearch(event.target.value.toLowerCase());
   };
@@ -191,14 +187,14 @@ const NoteSearch = ({ onSearch }) => {
   return (
     <input
       type="search"
-      className="input input-bordered input-primary w-full max-w-xs"
+      className="w-full max-w-xs input input-bordered input-primary"
       placeholder="Search notes..."
       onChange={handleSearch}
     />
   );
-};
+}
 
-const NotesApp = () => {
+function NotesApp() {
   const [notes, setNotes] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [filteredNotes, setFilteredNotes] = useState([]);
@@ -234,13 +230,14 @@ const NotesApp = () => {
   };
 
   return (
-    <div className="notes-app p-4 space-y-4">
+    <div className="w-full py-4 space-y-4  md:px-12 md:flex md:w-fit notes-app card">
       <h2 className="text-2xl font-semibold">Dear Journal,</h2>
+
       <NoteSearch onSearch={setSearchValue} />
       <NoteEditor onNoteAdd={handleNoteAdd} />
       <NotesGrid notes={filteredNotes} onNoteDelete={handleNoteDelete} />
     </div>
   );
-};
+}
 
 export default NotesApp;

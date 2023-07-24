@@ -1,18 +1,18 @@
-import React, { useState, useContext } from "react";
-import { AuthContext } from "./Context/authContext";
+/* eslint-disable */
+import React, { useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "./Context/authContext";
+import { useContext } from "react";
 
 function LoginForm() {
-  // const { setUser, setIsconnected } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const { setUser, setIsconnected } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
-  const success = () => toast.success("🦄 You did it!");
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -22,7 +22,6 @@ function LoginForm() {
       [name]: value,
     });
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -30,17 +29,16 @@ function LoginForm() {
       .post("http://localhost:5000/login", formData)
       .then(({ data }) => {
         const { user } = data;
+
         setFormData({
           email: "",
           password: "",
         });
-        console.log(user);
-        // Set the user using the setUser function from the AuthContext
-        // setUser(user);
-        localStorage.setItem("user", JSON.stringify(user));
-
-        // setIsconnected(true);
         navigate("/home");
+        // Set the user using the setUser function from the AuthContext
+        setUser(user);
+        localStorage.setItem("user", JSON.stringify(user));
+        setIsconnected(true);
       })
       .catch((error) => {
         console.error("Erreur lors de la requête :", error);

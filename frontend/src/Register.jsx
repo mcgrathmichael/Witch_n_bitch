@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -111,6 +112,7 @@ function Register() {
             <label>
               Select your star sign:
               <select
+                value={formData.starsign}
                 onChange={handleChange}
                 className="input-primary input w-full p-2 mb-12 border rounded"
               >
